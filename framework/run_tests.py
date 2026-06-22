@@ -72,7 +72,17 @@ class AITestFramework:
         if Path(json_file).exists():
             subprocess.run(['python', 'fix_cucumber_json.py', json_file], capture_output=True)
         
-        return result.returncode == 0, json_file
+        # Extract failed scenarios
+        failed_scenarios = []
+        if Path(json_file).exists():
+            with open(json_file) as f:
+                data = json.load(f)
+                for feature in data:
+                    for scenario in feature.get('elements', []):
+                        if any(st.get('result', {}).get('status') == 'failed' for st in scenario.get('steps', [])):
+                            failed_scenarios.append(f"API: {scenario.get('name', 'Unknown')}")
+        
+        return result.returncode == 0, json_file, failed_scenarios
     
     def run_ui_tests(self, timestamp):
         import subprocess
@@ -97,7 +107,17 @@ class AITestFramework:
         if Path(json_file).exists():
             subprocess.run(['python', 'fix_cucumber_json.py', json_file], capture_output=True)
         
-        return result.returncode == 0, json_file
+        # Extract failed scenarios
+        failed_scenarios = []
+        if Path(json_file).exists():
+            with open(json_file) as f:
+                data = json.load(f)
+                for feature in data:
+                    for scenario in feature.get('elements', []):
+                        if any(st.get('result', {}).get('status') == 'failed' for st in scenario.get('steps', [])):
+                            failed_scenarios.append(f"UI: {scenario.get('name', 'Unknown')}")
+        
+        return result.returncode == 0, json_file, failed_scenarios
     
     def run_tests(self):
         from datetime import datetime
@@ -105,10 +125,10 @@ class AITestFramework:
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         
         # Run API tests first
-        api_success, api_report = self.run_api_tests(timestamp)
+        api_success, api_report, api_failures = self.run_api_tests(timestamp)
         
         # Then run UI tests
-        ui_success, ui_report = self.run_ui_tests(timestamp)
+        ui_success, ui_report, ui_failures = self.run_ui_tests(timestamp)
         
         # Generate combined report
         self._generate_combined_report(api_report, ui_report, timestamp)
@@ -117,6 +137,13 @@ class AITestFramework:
         print(f"   API: tests/api/reports/cucumber_{timestamp}.json")
         print(f"   UI: tests/bdd/reports/cucumber_{timestamp}.json")
         print(f"\n💻 View with: npx cucumber-html-reporter --theme bootstrap")
+        
+        # Print failures if any
+        all_failures = api_failures + ui_failures
+        if all_failures:
+            print("\n❌ FAILED TEST CASES:")
+            for failure in all_failures:
+                print(f"   • {failure}")
         
         return api_success and ui_success
     
