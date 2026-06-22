@@ -32,12 +32,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: test-reports
-        path: framework/tests/reports/
-        retention-days: 30
-    
-    - name: Publish test results
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: combined-report
         path: framework/tests/reports/combined_report_*.html
+        retention-days: 30
