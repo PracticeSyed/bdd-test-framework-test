@@ -254,3 +254,6 @@ if __name__ == '__main__':
     
     success = framework.run_tests()
     print("\n✓ All tests passed!" if success else "\n✗ Tests failed")
+    
+    # Exit with proper code for CI/CD
+    sys.exit(0 if success else 1)
