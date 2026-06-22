@@ -25,7 +25,14 @@ jobs:
         playwright install chromium
     
     - name: Run tests
-      run: python run_tests.py
+      run: |
+        python run_tests.py || {
+          echo "";
+          echo "❌ TEST EXECUTION FAILED";
+          echo "See 'FAILED TEST CASES' section above for details";
+          echo "Download test reports from Artifacts for full details";
+          exit 1;
+        }
     
     - name: Upload test reports
       if: always()
