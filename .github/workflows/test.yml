@@ -39,5 +39,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: test-reports
-        path: framework/tests/reports/combined_report_*.html
+        path: framework/tests/reports/cucumber_report_*.html
         retention-days: 30
