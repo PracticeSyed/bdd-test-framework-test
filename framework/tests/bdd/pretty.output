@@ -1,0 +1,15 @@
+Feature: Validate registered user purchase flow # features/ai_generated.feature:1
+
+  Background:   # features/ai_generated.feature:3
+
+  Scenario: Validate registered user purchase flow     # features/ai_generated.feature:7
+    Given the application context is loaded            # steps/context_steps.py:20
+    And business rules are defined                     # steps/context_steps.py:25
+    Given I am a "Registered User"                     # steps/context_steps.py:31
+    And I am logged in with valid credentials          # steps/context_steps.py:41
+    When I browse products                             # steps/context_steps.py:55
+    And I add a product to cart                        # steps/context_steps.py:62
+    And I proceed to checkout                          # steps/context_steps.py:72
+    Then the order total should respect business rules # steps/context_steps.py:131
+    And I should see payment options                   # steps/context_steps.py:137
+

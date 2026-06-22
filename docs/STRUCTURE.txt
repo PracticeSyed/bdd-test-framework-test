@@ -1,0 +1,70 @@
+📁 AI-Powered BDD Test Framework Structure
+═══════════════════════════════════════════
+
+shared/
+│
+├── 🚀 run_tests.py                    # Main entry point - Run this!
+├── 📖 README.md                       # Documentation
+│
+└── tests/
+    ├── __init__.py
+    │
+    └── bdd/
+        ├── __init__.py
+        ├── behave.ini                 # Behave configuration
+        ├── requirements.txt           # Dependencies
+        ├── environment.py             # Test hooks (setup/teardown)
+        │
+        ├── 📝 features/               # Gherkin scenarios
+        │   ├── chrome_store.feature
+        │   └── practice_site.feature
+        │
+        ├── 🔧 steps/                  # Step definitions
+        │   ├── auto_steps.py          # Auto-generated steps
+        │   └── chrome_store_steps.py  # Chrome store steps
+        │
+        ├── 📄 pages/                  # Page objects (AUTO-GENERATED)
+        │   └── page_objects.py        # ⚡ Auto-updated by framework
+        │
+        ├── 🛠️ utils/                  # Framework utilities
+        │   ├── dom_extractor.py       # Extracts DOM structure
+        │   └── page_object_generator.py # Generates page classes
+        │
+        ├── ⚙️ config/                 # Configuration
+        │   └── page_objects.json      # ⚡ Auto-updated DOM storage
+        │
+        └── 📊 reports/                # Test reports (generated)
+
+
+🎯 Key Files:
+═════════════
+
+🚀 run_tests.py              → Run this to execute all tests
+📝 features/*.feature        → Write your test scenarios here
+🔧 steps/*.py               → Define step implementations here
+📄 pages/page_objects.py    → AUTO-GENERATED (don't edit manually)
+⚙️ config/page_objects.json → AUTO-GENERATED (DOM structure)
+
+
+⚡ Auto-Updated Files:
+═══════════════════════
+
+These files are automatically regenerated when DOM changes:
+  • tests/bdd/pages/page_objects.py
+  • tests/bdd/config/page_objects.json
+
+
+🎮 Quick Commands:
+═══════════════════
+
+Run all tests:
+  python run_tests.py
+
+Run specific feature:
+  behave tests/bdd/features/practice_site.feature
+
+Extract DOM only:
+  cd tests/bdd/utils && python dom_extractor.py
+
+Generate page objects:
+  cd tests/bdd/utils && python page_object_generator.py

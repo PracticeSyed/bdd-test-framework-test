@@ -1,0 +1,68 @@
+{
+  "url": "https://practicesoftwaretesting.com/",
+  "title": "Just a moment...",
+  "timestamp": "2026-06-19T09:34:49.740190",
+  "elements": {
+    "nav": [],
+    "header": [],
+    "main": [
+      {
+        "tag": "div",
+        "text": "practicesoftwaretesting.com\nPerforming security verification\n\nThis website uses a security service t",
+        "attributes": {
+          "class": "main-wrapper Vcwc7",
+          "role": "main"
+        },
+        "selector": "div.main-wrapper"
+      }
+    ],
+    "footer": [
+      {
+        "tag": "div",
+        "text": "Ray ID: a0e18a484a21a9d3\nPerformance and Security by Cloudflare\nPrivacy",
+        "attributes": {
+          "class": "footer",
+          "role": "contentinfo"
+        },
+        "selector": "div.footer"
+      }
+    ],
+    "buttons": [],
+    "links": [
+      {
+        "tag": "a",
+        "text": "Cloudflare",
+        "attributes": {
+          "rel": "noopener noreferrer",
+          "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m",
+          "target": "_blank"
+        },
+        "selector": "a"
+      },
+      {
+        "tag": "a",
+        "text": "Privacy",
+        "attributes": {
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "href": "https://www.cloudflare.com/privacypolicy/",
+          "class": "footer-text"
+        },
+        "selector": "a.footer-text"
+      }
+    ],
+    "forms": [],
+    "inputs": [
+      {
+        "tag": "input",
+        "text": "",
+        "attributes": {
+          "type": "hidden",
+          "name": "cf-turnstile-response",
+          "id": "cf-chl-widget-jqmts_response"
+        },
+        "selector": "#cf-chl-widget-jqmts_response"
+      }
+    ]
+  }
+}

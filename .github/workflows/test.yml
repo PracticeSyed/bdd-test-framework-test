@@ -1,0 +1,43 @@
+name: BDD Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r framework/tests/bdd/requirements.txt
+        playwright install chromium
+    
+    - name: Run tests
+      run: python run_tests.py
+    
+    - name: Upload test reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-reports
+        path: framework/tests/reports/
+        retention-days: 30
+    
+    - name: Publish test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: combined-report
+        path: framework/tests/reports/combined_report_*.html

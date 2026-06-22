@@ -1,0 +1,5 @@
+playwright==1.48.0
+behave==1.2.6
+pytest-bdd==7.3.0
+requests==2.31.0
+allure-behave==2.13.2

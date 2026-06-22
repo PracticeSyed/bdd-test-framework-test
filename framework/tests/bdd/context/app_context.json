@@ -1,0 +1,48 @@
+{
+  "application": {
+    "name": "Practice Software Testing Site",
+    "url": "https://practicesoftwaretesting.com/",
+    "type": "E-commerce",
+    "domain": "Software Testing Practice"
+  },
+  "user_personas": [
+    {
+      "name": "Guest User",
+      "goals": ["Browse products", "View details", "Search items"],
+      "permissions": ["read_only"]
+    },
+    {
+      "name": "Registered User",
+      "goals": ["Login", "Add to cart", "Checkout", "View orders"],
+      "permissions": ["read", "write", "purchase"]
+    }
+  ],
+  "critical_flows": [
+    {
+      "name": "Product Purchase Flow",
+      "steps": ["Browse → Select → Add to Cart → Checkout → Payment → Confirmation"],
+      "priority": "high"
+    },
+    {
+      "name": "User Registration Flow",
+      "steps": ["Sign Up → Verify Email → Login → Profile Setup"],
+      "priority": "medium"
+    }
+  ],
+  "business_rules": [
+    "Users must be logged in to purchase",
+    "Cart persists across sessions",
+    "Minimum order value: $10",
+    "Free shipping over $50"
+  ],
+  "test_data": {
+    "valid_user": {
+      "email": "test@example.com",
+      "password": "Test123!"
+    },
+    "products": {
+      "sample_product": "Hammer",
+      "price_range": [5, 500]
+    }
+  }
+}

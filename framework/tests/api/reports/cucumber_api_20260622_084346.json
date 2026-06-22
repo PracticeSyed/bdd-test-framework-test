@@ -1,0 +1,639 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Scenario",
+      "location": "tests/api/features/api_tests.feature:3",
+      "name": "Get all products",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "tests/api/features/api_tests.feature:4",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://api.practicesoftwaretesting.com"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:4"
+          },
+          "name": "the API base URL is \"https://api.practicesoftwaretesting.com\"",
+          "result": {
+            "duration": 0.04845714569091797,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "tests/api/features/api_tests.feature:5",
+          "match": {
+            "arguments": [
+              {
+                "name": "endpoint",
+                "value": "/products"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:8"
+          },
+          "name": "I send a GET request to \"/products\"",
+          "result": {
+            "duration": 0.18726778030395508,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "tests/api/features/api_tests.feature:6",
+          "match": {
+            "arguments": [
+              {
+                "name": "status_code",
+                "original": "200",
+                "value": 200
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:16"
+          },
+          "name": "the response status code should be 200",
+          "result": {
+            "duration": 0.00018668174743652344,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "tests/api/features/api_tests.feature:7",
+          "match": {
+            "arguments": [],
+            "location": "tests/api/steps/api_steps.py:21"
+          },
+          "name": "the response should contain products data",
+          "result": {
+            "duration": 0.00019669532775878906,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "tests/api/features/api_tests.feature:9",
+      "name": "Get single product by ID",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "tests/api/features/api_tests.feature:10",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://api.practicesoftwaretesting.com"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:4"
+          },
+          "name": "the API base URL is \"https://api.practicesoftwaretesting.com\"",
+          "result": {
+            "duration": 9.679794311523438e-05,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "tests/api/features/api_tests.feature:11",
+          "match": {
+            "arguments": [
+              {
+                "name": "endpoint",
+                "value": "/products/01KVQ5GFQ4S61JH2SSYKD60ET8"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:8"
+          },
+          "name": "I send a GET request to \"/products/01KVQ5GFQ4S61JH2SSYKD60ET8\"",
+          "result": {
+            "duration": 0.14696717262268066,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "tests/api/features/api_tests.feature:12",
+          "match": {
+            "arguments": [
+              {
+                "name": "status_code",
+                "original": "200",
+                "value": 200
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:16"
+          },
+          "name": "the response status code should be 200",
+          "result": {
+            "duration": 7.939338684082031e-05,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "tests/api/features/api_tests.feature:13",
+          "match": {
+            "arguments": [],
+            "location": "tests/api/steps/api_steps.py:28"
+          },
+          "name": "the response should have product details",
+          "result": {
+            "duration": 0.00010228157043457031,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "tests/api/features/api_tests.feature:15",
+      "name": "Get all categories",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "tests/api/features/api_tests.feature:16",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://api.practicesoftwaretesting.com"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:4"
+          },
+          "name": "the API base URL is \"https://api.practicesoftwaretesting.com\"",
+          "result": {
+            "duration": 0.00010967254638671875,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "tests/api/features/api_tests.feature:17",
+          "match": {
+            "arguments": [
+              {
+                "name": "endpoint",
+                "value": "/categories"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:8"
+          },
+          "name": "I send a GET request to \"/categories\"",
+          "result": {
+            "duration": 0.13027405738830566,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "tests/api/features/api_tests.feature:18",
+          "match": {
+            "arguments": [
+              {
+                "name": "status_code",
+                "original": "200",
+                "value": 200
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:16"
+          },
+          "name": "the response status code should be 200",
+          "result": {
+            "duration": 9.202957153320312e-05,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "tests/api/features/api_tests.feature:19",
+          "match": {
+            "arguments": [],
+            "location": "tests/api/steps/api_steps.py:34"
+          },
+          "name": "the response should be a list",
+          "result": {
+            "duration": 0.0001068115234375,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "tests/api/features/api_tests.feature:21",
+      "name": "Get all brands",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "tests/api/features/api_tests.feature:22",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://api.practicesoftwaretesting.com"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:4"
+          },
+          "name": "the API base URL is \"https://api.practicesoftwaretesting.com\"",
+          "result": {
+            "duration": 0.00011944770812988281,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "tests/api/features/api_tests.feature:23",
+          "match": {
+            "arguments": [
+              {
+                "name": "endpoint",
+                "value": "/brands"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:8"
+          },
+          "name": "I send a GET request to \"/brands\"",
+          "result": {
+            "duration": 0.12934279441833496,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "tests/api/features/api_tests.feature:24",
+          "match": {
+            "arguments": [
+              {
+                "name": "status_code",
+                "original": "200",
+                "value": 200
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:16"
+          },
+          "name": "the response status code should be 200",
+          "result": {
+            "duration": 9.441375732421875e-05,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "tests/api/features/api_tests.feature:25",
+          "match": {
+            "arguments": [],
+            "location": "tests/api/steps/api_steps.py:34"
+          },
+          "name": "the response should be a list",
+          "result": {
+            "duration": 7.462501525878906e-05,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "tests/api/features/api_tests.feature:27",
+      "name": "Search products by name",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "tests/api/features/api_tests.feature:28",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://api.practicesoftwaretesting.com"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:4"
+          },
+          "name": "the API base URL is \"https://api.practicesoftwaretesting.com\"",
+          "result": {
+            "duration": 8.869171142578125e-05,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "tests/api/features/api_tests.feature:29",
+          "match": {
+            "arguments": [
+              {
+                "name": "endpoint",
+                "value": "/products?q=hammer"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:8"
+          },
+          "name": "I send a GET request to \"/products?q=hammer\"",
+          "result": {
+            "duration": 0.13523411750793457,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "tests/api/features/api_tests.feature:30",
+          "match": {
+            "arguments": [
+              {
+                "name": "status_code",
+                "original": "200",
+                "value": 200
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:16"
+          },
+          "name": "the response status code should be 200",
+          "result": {
+            "duration": 8.702278137207031e-05,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "tests/api/features/api_tests.feature:31",
+          "match": {
+            "arguments": [],
+            "location": "tests/api/steps/api_steps.py:21"
+          },
+          "name": "the response should contain products data",
+          "result": {
+            "duration": 0.00021791458129882812,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "tests/api/features/api_tests.feature:33",
+      "name": "Filter products by category",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "tests/api/features/api_tests.feature:34",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://api.practicesoftwaretesting.com"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:4"
+          },
+          "name": "the API base URL is \"https://api.practicesoftwaretesting.com\"",
+          "result": {
+            "duration": 9.059906005859375e-05,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "tests/api/features/api_tests.feature:35",
+          "match": {
+            "arguments": [
+              {
+                "name": "endpoint",
+                "value": "/products?by_category=01KVQ5GFQ4S61JH2SSYKD60ET8"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:8"
+          },
+          "name": "I send a GET request to \"/products?by_category=01KVQ5GFQ4S61JH2SSYKD60ET8\"",
+          "result": {
+            "duration": 0.10861754417419434,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "tests/api/features/api_tests.feature:36",
+          "match": {
+            "arguments": [
+              {
+                "name": "status_code",
+                "original": "200",
+                "value": 200
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:16"
+          },
+          "name": "the response status code should be 200",
+          "result": {
+            "duration": 9.179115295410156e-05,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "tests/api/features/api_tests.feature:38",
+      "name": "Get products with pagination",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "tests/api/features/api_tests.feature:39",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://api.practicesoftwaretesting.com"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:4"
+          },
+          "name": "the API base URL is \"https://api.practicesoftwaretesting.com\"",
+          "result": {
+            "duration": 9.393692016601562e-05,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "tests/api/features/api_tests.feature:40",
+          "match": {
+            "arguments": [
+              {
+                "name": "endpoint",
+                "value": "/products?page=1"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:8"
+          },
+          "name": "I send a GET request to \"/products?page=1\"",
+          "result": {
+            "duration": 0.1146996021270752,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "tests/api/features/api_tests.feature:41",
+          "match": {
+            "arguments": [
+              {
+                "name": "status_code",
+                "original": "200",
+                "value": 200
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:16"
+          },
+          "name": "the response status code should be 200",
+          "result": {
+            "duration": 8.392333984375e-05,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "And",
+          "location": "tests/api/features/api_tests.feature:42",
+          "match": {
+            "arguments": [],
+            "location": "tests/api/steps/api_steps.py:21"
+          },
+          "name": "the response should contain products data",
+          "result": {
+            "duration": 0.0001685619354248047,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario",
+      "location": "tests/api/features/api_tests.feature:44",
+      "name": "Invalid product ID returns 404",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "tests/api/features/api_tests.feature:45",
+          "match": {
+            "arguments": [
+              {
+                "name": "url",
+                "value": "https://api.practicesoftwaretesting.com"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:4"
+          },
+          "name": "the API base URL is \"https://api.practicesoftwaretesting.com\"",
+          "result": {
+            "duration": 0.00011682510375976562,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "tests/api/features/api_tests.feature:46",
+          "match": {
+            "arguments": [
+              {
+                "name": "endpoint",
+                "value": "/products/invalid-id-12345"
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:8"
+          },
+          "name": "I send a GET request to \"/products/invalid-id-12345\"",
+          "result": {
+            "duration": 0.1105952262878418,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "tests/api/features/api_tests.feature:47",
+          "match": {
+            "arguments": [
+              {
+                "name": "status_code",
+                "original": "404",
+                "value": 404
+              }
+            ],
+            "location": "tests/api/steps/api_steps.py:16"
+          },
+          "name": "the response status code should be 404",
+          "result": {
+            "duration": 7.748603820800781e-05,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "tests/api/features/api_tests.feature:1",
+  "name": "API Testing - Practice Software Testing",
+  "status": "passed",
+  "tags": []
+}
+]
