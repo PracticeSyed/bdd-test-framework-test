@@ -133,14 +133,16 @@ class AITestFramework:
         # Generate combined report
         self._generate_combined_report(api_report, ui_report, timestamp)
         
-        print(f"\n📊 Combined Report: tests/reports/combined_report_{timestamp}.html")
-        
         # Print failures if any
         all_failures = api_failures + ui_failures
         if all_failures:
             print("\n❌ FAILED TEST CASES:")
             for failure in all_failures:
                 print(f"   • {failure}")
+        else:
+            print("\n✅ All tests passed!")
+        
+        print(f"\n📊 Report: tests/reports/combined_report_{timestamp}.html")
         
         return api_success and ui_success
     
