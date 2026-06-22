@@ -133,10 +133,7 @@ class AITestFramework:
         # Generate combined report
         self._generate_combined_report(api_report, ui_report, timestamp)
         
-        print(f"\n🥒 Cucumber JSON Reports (use cucumber-html-reporter to view):")
-        print(f"   API: tests/api/reports/cucumber_{timestamp}.json")
-        print(f"   UI: tests/bdd/reports/cucumber_{timestamp}.json")
-        print(f"\n💻 View with: npx cucumber-html-reporter --theme bootstrap")
+        print(f"\n📊 Combined Report: tests/reports/combined_report_{timestamp}.html")
         
         # Print failures if any
         all_failures = api_failures + ui_failures
@@ -238,10 +235,6 @@ body{{font-family:Arial;margin:20px;background:#f5f5f5}}
         Path('tests/reports').mkdir(parents=True, exist_ok=True)
         with open(report_file, 'w') as f:
             f.write(html)
-        
-        print(f"\n📊 Combined Report: {report_file}")
-        print(f"   API Report: {api_report}")
-        print(f"   UI Report: {ui_report}")
     
     def _generate_cucumber_html_reports(self, timestamp):
         import subprocess
