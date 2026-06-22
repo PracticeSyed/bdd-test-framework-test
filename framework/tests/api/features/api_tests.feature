@@ -8,7 +8,7 @@ Feature: API Testing - Practice Software Testing
   
   Scenario: Get single product by ID
     Given the API base URL is "https://api.practicesoftwaretesting.com"
-    When I send a GET request to "/products/01KVQ5GFQ4S61JH2SSYKD60ET8"
+    When I send a GET request to "/products/01KVQCC6BV4YKZZ76PX3GXT71M"
     Then the response status code should be 200
     And the response should have product details
   
